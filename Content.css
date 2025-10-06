@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #00c3ff; 
+  color: #000000;
+}
+
+.container-navbar {
+  background-color: #333;
+  padding: 15px;
+  text-align: center;
+}
+
+.ul-navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li-navbar {
+  display: inline;
+  margin: 0 20px;
+}
+
+.a-navbar {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.a-navbar:hover {
+  color: #00c3ff;
+}
+
+.container-content {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+.container-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.container-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.form-contact {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-contact label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+/* khusus untuk label radio */
+.form-contact input[type="radio"] {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.form-contact label.radio-inline {
+  display: inline-block;
+  margin-right: 15px;
+  font-weight: normal; /* biar teksnya gak tebal */
+  vertical-align: middle;
+}
+
+.form-contact input,
+.form-contact textarea,
+.form-contact select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-contact textarea {
+  resize: vertical;
+}
+
+.form-contact button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.form-contact button:hover {
+  background: #00c3ff;
+}
+
+.container-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+.h1-footer {
+  font-size: 18px;
+  margin: 0;
+}
