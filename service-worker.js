@@ -1,7 +1,7 @@
-const CACHE_NAME = "zahran-network-v1"
+const CACHE_NAME = "zahran-network-v2"
 const OFFLINE_URL = "/offline.html"
 
-const urlTcoCache = [
+const urlsTcoCache = [
     "./index.html",
     "./about.html",
     "./contact.html",
