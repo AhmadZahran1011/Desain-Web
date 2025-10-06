@@ -1,7 +1,7 @@
 const CACHE_NAME = "zahran-network-v2"
 const OFFLINE_URL = "/offline.html"
 
-const urlsTcoCache = [
+const urlsToCache = [
     "./index.html",
     "./about.html",
     "./contact.html",
@@ -52,4 +52,5 @@ self.addEventListener("fetch", event => {
       });
     })
   );
+
 });
