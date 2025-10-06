@@ -1,0 +1,20 @@
+{
+    "name": "Zahran NETWORK",
+    "short_name": "ZahranNet",
+    "start_url": "/",
+    "display": "standalone",
+    "backgroundd_color": "#ffffff",
+    "theme_color": "#00c3ff",
+    "icons":[
+        {
+            "src": "Artboard 3.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "Artboard 3.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
