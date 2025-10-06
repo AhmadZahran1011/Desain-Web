@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me - Zahran NETWORK</title>
+  <link rel="stylesheet" href="About.css">
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00c3ff">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="container-navbar">
+    <ul class="ul-navbar">
+      <li class="li-navbar"><a href="index.html" class="a-navbar">Home</a></li>
+      <li class="li-navbar"><a href="about.html" class="a-navbar active">About Me</a></li>
+      <li class="li-navbar"><a href="contact.html" class="a-navbar">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="container-about">
+    <h1>Ahmad Zahran</h1>
+    <p>
+      Halo, saya Zahran. Mahasiswa yang tertarik dengan dunia pemrograman, desain web, 
+      dan jaringan komputer. Website ini saya buat sebagai tugas mata kuliah Desain Web.
+    </p>
+
+    <div class="info-section">
+      <div class="card">
+        <h3>Pendidikan</h3>
+        <p>Mahasiswa Informatika, Universitas Andalas</p>
+      </div>
+
+      <div class="card">
+        <h3>Keahlian</h3>
+        <p>Java, HTML, CSS, SQL, dan pengembangan aplikasi sederhana.</p>
+      </div>
+
+      <div class="card">
+        <h3>Hobi</h3>
+        <p>Membaca, menulis, dan eksplorasi teknologi baru.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="container-footer">
+    <h1 class="h1-footer">Terima Kasih</h1>
+  </footer>
+  
+  <script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("/service-worker.js")
+      .then(() => console.log("✅ Service Worker terdaftar"))
+      .catch(err => console.error("❌ SW gagal:", err));
+  }
+</script>
+
+</body>
+</html>
