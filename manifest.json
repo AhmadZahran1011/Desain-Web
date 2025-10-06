@@ -1,7 +1,7 @@
 {
     "name": "Zahran NETWORK",
     "short_name": "ZahranNet",
-    "start_url": "/",
+    "start_url": "./index.html",
     "display": "standalone",
     "backgroundd_color": "#ffffff",
     "theme_color": "#00c3ff",

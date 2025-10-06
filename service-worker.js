@@ -2,14 +2,14 @@ const CACHE_NAME = "zahran-network-v1"
 const OFFLINE_URL = "/offline.html"
 
 const urlTcoCache = [
-    "/",
-    "/index.html",
-    "/about.html",
-    "/contact.html",
-    "/offline.html",
-    "/Edit.css",
-    "/About.css",
-    "/Content.css"
+    "./",
+    "./index.html",
+    "./about.html",
+    "./contact.html",
+    "./offline.html",
+    "./Edit.css",
+    "./About.css",
+    "./Content.css"
 ];
 
 self.addEventListener("install", event => {
