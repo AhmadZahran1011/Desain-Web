@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zahran NETWORK</title>
+  <link rel="stylesheet" href="Edit.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#00c3ff" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div class="container-navbar">
+    <ul class="ul-navbar">
+      <!-- Tombol install PWA di navbar -->
+      <li class="li-navbar left-item">
+        <button id="installBtn" class="install-btn" style="display: none;">Install Aplikasi</button>
+      </li>
+      <li class="li-navbar"><a href="index.html" class="a-navbar">Home</a></li>
+      <li class="li-navbar"><a href="about.html" class="a-navbar">About Me</a></li>
+      <li class="li-navbar"><a href="contact.html" class="a-navbar">Contact Me</a></li>
+    </ul>
+  </div>
+  <!-- NAVBAR END -->
+
+  <!-- CONTENT -->
+  <main>
+    <div class="container-content">
+      <h1>Selamat Datang</h1>
+      <p>
+        Website ini dibuat untuk tugas Desain Web.<br />
+        Di sini Anda dapat menemukan perkenalan singkat, informasi tentang saya,
+        serta cara menghubungi saya melalui halaman kontak.
+      </p>
+    </div>
+   <!-- Bagian penjelasan fitur PWA -->
+<section class="pwa-info">
+  <div class="pwa-card">
+    <h2> Fitur PWA (Progressive Web App)</h2>
+    <p>
+      Website <strong>Zahran NETWORK</strong> kini sudah mendukung teknologi 
+      <em>Progressive Web App (PWA)</em> untuk pengalaman pengguna yang lebih baik! 
+    </p>
+
+    <div class="pwa-features">
+      <div class="pwa-item">
+        <div>
+          <h3>Dapat Diinstal</h3>
+          <p>Pasang langsung di perangkat Anda tanpa perlu Play Store.</p>
+        </div>
+      </div>
+
+      <div class="pwa-item">
+        <div>
+          <h3>Lebih Cepat</h3>
+          <p>Website terbuka lebih cepat setelah instalasi.</p>
+        </div>
+      </div>
+
+      <div class="pwa-item">
+        <div>
+          <h3>Offline Mode</h3>
+          <p>Bisa diakses tanpa koneksi internet berkat cache offline.</p>
+        </div>
+      </div>
+
+      <div class="pwa-item">
+        <div>
+          <h3>Fitur Modern</h3>
+          <p>Dapat mendukung notifikasi dan fitur aplikasi lain.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="pwa-install-note">
+      Tekan tombol <strong>“Install Aplikasi”</strong> di pojok atas untuk memasang versi aplikasi dan nikmati pengalaman layaknya aplikasi asli! 
+    </p>
+  </div>
+</section>
+
+  </main>
+  <!-- CONTENT END -->
+
+  <!-- FOOTER -->
+  <div class="container-footer">
+    <h1 class="h1-footer">Terima Kasih</h1>
+  </div>
+  <!-- FOOTER END -->
+
+  <!-- JAVASCRIPT: Service Worker + Install -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(() => console.log("✅ Service Worker terdaftar"))
+        .catch((err) => console.error("❌ SW gagal:", err));
+    }
+
+    let deferredPrompt;
+    const installBtn = document.getElementById("installBtn");
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = "inline-block"; 
+    });
+
+    installBtn.addEventListener("click", async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log(`User response: ${outcome}`);
+        deferredPrompt = null;
+        installBtn.style.display = "fixed";
+        installBtn.style.zIndex = "9999";
+      }
+    });
+
+    window.addEventListener("appinstalled", () => {
+      console.log("✅ PWA sudah diinstal!");
+      installBtn.style.display = "none";
+    });
+  </script>
+</body>
+</html>
