@@ -2,7 +2,7 @@ const CACHE_NAME = "zahran-network-v1"
 const OFFLINE_URL = "/offline.html"
 
 const urlTcoCache = [
-    "./Index.html",
+    "./index.html",
     "./about.html",
     "./contact.html",
     "./offline.html",
