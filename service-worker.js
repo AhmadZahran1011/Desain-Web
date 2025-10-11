@@ -10,7 +10,8 @@ const urlsToCache = [
   "./Edit.css",
   "./About.css",
   "./Content.css",
-  "./Artboard 3.png"
+  "192.png",
+  "512.png"
 ];
 
 // Instalasi Service Worker dan caching awal
