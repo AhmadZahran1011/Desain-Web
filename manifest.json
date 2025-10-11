@@ -8,14 +8,16 @@
     "theme_color": "#00c3ff",
     "icons":[
         {
-            "src": "./Artboard 3.png",
+            "src": "192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any"
         },
         {
-            "src": "./Artboard 3.png",
+            "src": "512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose":"any"
         }
     ]
 }
